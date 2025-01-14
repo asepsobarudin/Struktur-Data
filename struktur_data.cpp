@@ -28,8 +28,9 @@ public:
             cout << "\n=== Menu Stack ===\n";
             cout << "1. Push\n";
             cout << "2. Pop\n";
-            cout << "3. Display\n";
-            cout << "4. Kembali ke menu utama\n";
+            cout << "3. Peek\n";
+            cout << "4. Display\n";
+            cout << "5. Kembali ke menu utama\n";
             cout << "Masukan pilihan anda: ";
             cin >> choice;
 
@@ -44,9 +45,12 @@ public:
                 pop();
                 break;
             case 3:
-                display();
+                peek();
                 break;
             case 4:
+                display();
+                break;
+            case 5:
                 cout << "Kembali ke menu utama.\n";
                 break;
             default:
@@ -90,6 +94,19 @@ public:
         {
             cout << "Elemen " << arr[top] << " berhasil di hapus dari stack. \n";
             top--;
+        }
+    }
+
+    // Melihat elemen paling atas
+    void peek()
+    {
+        if (isEmpty())
+        {
+            cout << "Stack kosong!\n";
+        }
+        else
+        {
+            cout << "Elemen teratas pada stack adalah: " << arr[top] << "\n";
         }
     }
 
