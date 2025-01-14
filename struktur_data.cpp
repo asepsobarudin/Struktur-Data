@@ -56,7 +56,7 @@ public:
             default:
                 cout << "Pilihan tidak di temukan silahkan coba lagi!\n";
             }
-        } while (choice != 4);
+        } while (choice != 5);
     }
 
     bool isEmpty()
@@ -727,7 +727,7 @@ public:
     // function untuk membuat array dan input data
     void createArray()
     {
-        cout << "Masukan ukuran array (MAX "<< MAX <<"): ";
+        cout << "Masukan ukuran array (MAX " << MAX << "): ";
         cin >> size;
 
         if (size > MAX)
@@ -804,7 +804,8 @@ public:
         }
 
         cout << "Array: ";
-        for(int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++)
+        {
             cout << arr[i] << " ";
         }
         cout << endl;
@@ -855,7 +856,8 @@ private:
     }
 
 public:
-    ProgramSortingAlgorithm(){
+    ProgramSortingAlgorithm()
+    {
         size = 0;
     }
 
